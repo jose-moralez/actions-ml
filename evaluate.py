@@ -13,7 +13,7 @@ def evaluate(test_horizon: int,
              wandb_proj: Optional[str] = None) -> None:
     if wandb_proj is not None:
         import wandb
-        github_sha = os.getenv('GITHUB_SHA')
+        github_sha = os.getenv('WANDB_SHA')
         wandb.init(project=wandb_proj)
         wandb.config.github_sha = github_sha
     data = generate_data()
