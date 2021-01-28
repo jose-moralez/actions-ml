@@ -27,7 +27,7 @@ jobs:
       - name: Create run
         run: |
           pip install -r requirements.txt
-          python evaluate.py 84 --wandb-proj gha
+          python evaluate.py 168 --wandb-proj gha
           sleep 10
         env:
           WANDB_SHA: ${{ steps.comment.outputs.SHA }}
