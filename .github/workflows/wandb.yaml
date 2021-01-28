@@ -18,6 +18,8 @@ jobs:
           
       - name: Clone repo
         uses: actions/checkout@v2
+        with:
+          ref: ${{ steps.comment.outputs.SHA }}
 
       - name: Set up python
         uses: actions/setup-python@v2
